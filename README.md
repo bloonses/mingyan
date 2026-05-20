@@ -18,12 +18,14 @@
 - **模块系统** — `导入`/`从`...`导入`
 - **丰富内置函数** — 数学、文件 I/O、类型检查、列表/字符串/字典方法
 - **交互式 REPL** — 支持多行输入、帮助信息
+- **可视化编辑器** — 附带基于 Web 的鸣言编辑器，支持一键启动
 
 ## 快速开始
 
 ### 环境要求
 
 - Python 3.6+
+- Node.js（使用编辑器时需要）
 
 ### 启动方式
 
@@ -40,6 +42,26 @@ python huayen.py -e "打印(\"你好，世界！\")"
 # 显示帮助信息
 python huayen.py -h
 ```
+
+### 鸣言编辑器
+
+项目附带了一个基于 Web 的可视化编辑器，打包在 `editor.7z` 中。
+
+**安装步骤：**
+
+1. 解压 `editor.7z` 到项目目录，得到 `editor` 文件夹
+2. 确保已安装 [Node.js](https://nodejs.org/)
+
+**启动方式：**
+
+- **一键启动（Windows）**：双击 `启动编辑器.bat`，脚本会自动安装依赖并启动开发服务器，随后在浏览器中打开编辑器
+- **手动启动**：
+  ```bash
+  cd editor
+  npm install
+  npm run dev
+  ```
+  然后在浏览器中访问 `http://localhost:5173/`
 
 ## 语法概览
 
@@ -188,7 +210,11 @@ python huayen.py -h
 ├── 类测试.鸣           # 类继承测试
 ├── 高级测试.鸣         # 高级功能测试
 ├── 乘法表.鸣           # 九九乘法表
-└── test_interpreter.js # 解释器测试（JavaScript）
+├── test_interpreter.js # 解释器测试（JavaScript）
+├── editor.7z           # 鸣言编辑器压缩包
+├── 启动编辑器.bat       # Windows 一键启动编辑器
+├── 启动编辑器.vbs       # Windows 后台启动编辑器
+└── start_editor.bat    # 编辑器快速启动脚本
 ```
 
 ## 关键字对照
