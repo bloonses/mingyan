@@ -4,11 +4,11 @@ color 0A
 cls
 
 echo Starting Mingyan Editor...
-cd /d "C:\Users\bloon\Downloads\huayen\editor"
+cd /d "%~dp0"
 
 if not exist "node_modules" (
     echo Installing dependencies...
-    npm install --cache C:\Users\bloon\AppData\Local\npm-cache > npm_install.log 2>&1
+    npm install > npm_install.log 2>&1
 )
 
 echo Starting development server...

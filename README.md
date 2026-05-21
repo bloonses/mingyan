@@ -31,16 +31,16 @@
 
 ```bash
 # 启动交互式环境 (REPL)
-python huayen.py
+python src/huayen.py
 
 # 执行鸣言源文件
-python huayen.py 示例.鸣
+python src/huayen.py examples/示例.鸣
 
 # 直接执行一行代码
-python huayen.py -e "打印(\"你好，世界！\")"
+python src/huayen.py -e "打印(\"你好，世界！\")"
 
 # 显示帮助信息
-python huayen.py -h
+python src/huayen.py -h
 ```
 
 ### 鸣言编辑器
@@ -54,7 +54,7 @@ python huayen.py -h
 
 **启动方式：**
 
-- **一键启动（Windows）**：双击 `启动编辑器.bat`，脚本会自动安装依赖并启动开发服务器，随后在浏览器中打开编辑器
+- **一键启动（Windows）**：解压 `editor.7z` 后，进入 `editor` 文件夹，双击 `启动编辑器.bat`，脚本会自动安装依赖并启动开发服务器，随后在浏览器中打开编辑器
 - **手动启动**：
   ```bash
   cd editor
@@ -197,24 +197,30 @@ python huayen.py -h
 ## 项目结构
 
 ```
-├── huayen.py           # 主入口（REPL / 文件执行 / 命令行）
-├── lexer.py            # 词法分析器
-├── parser.py           # 语法解析器
-├── ast_nodes.py        # AST 节点定义
-├── interpreter.py      # 解释器
-├── repl.py             # 交互式环境
-├── 入门.鸣             # 入门示例
-├── 示例.鸣             # 完整功能示例
-├── 猜数字.鸣           # 猜数字游戏
-├── 算法.鸣             # 排序与查找算法
-├── 类测试.鸣           # 类继承测试
-├── 高级测试.鸣         # 高级功能测试
-├── 乘法表.鸣           # 九九乘法表
-├── test_interpreter.js # 解释器测试（JavaScript）
-├── editor.7z           # 鸣言编辑器压缩包
-├── 启动编辑器.bat       # Windows 一键启动编辑器
-├── 启动编辑器.vbs       # Windows 后台启动编辑器
-└── start_editor.bat    # 编辑器快速启动脚本
+├── README.md            # 项目文档
+├── src/                 # 核心语言源码
+│   ├── huayen.py        # 主入口（REPL / 文件执行 / 命令行）
+│   ├── lexer.py         # 词法分析器
+│   ├── parser.py        # 语法解析器
+│   ├── ast_nodes.py     # AST 节点定义
+│   ├── interpreter.py   # 解释器
+│   └── repl.py          # 交互式环境
+├── examples/            # 鸣言示例程序
+│   ├── 入门.鸣          # 入门示例
+│   ├── 示例.鸣          # 完整功能示例
+│   ├── 猜数字.鸣        # 猜数字游戏
+│   ├── 算法.鸣          # 排序与查找算法
+│   ├── 类测试.鸣        # 类继承测试
+│   ├── 高级测试.鸣      # 高级功能测试
+│   ├── 乘法表.鸣        # 九九乘法表
+│   └── test.鸣          # 简单测试
+├── tests/              # 测试文件
+│   └── test_interpreter.js  # 解释器测试（JavaScript）
+└── editor/             # 鸣言编辑器
+    ├── editor.7z       # 编辑器压缩包（需解压后使用）
+    ├── 启动编辑器.bat   # Windows 一键启动编辑器
+    ├── 启动编辑器.vbs   # Windows 后台启动编辑器
+    └── start_editor.bat # 编辑器快速启动脚本
 ```
 
 ## 关键字对照
